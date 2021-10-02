@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.svgBx{
+    width: 300px;
+    height: 200px;
+}
+.svgBx svg{
+    position: absolute;
+    inset: 0;
+    fill: none;
+    stroke: url(#col);
+    stroke-width: 10;
+    stroke-dasharray: 60 172;
+    stroke-linecap: round;
+    transform: scale(2);
+    animation: ani 5s linear infinite;
+}
+@keyframes ani{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 116;
+    }
+    100%{
+        stroke-dashoffset: 232;
+    }
+}
+.svgBx svg:nth-of-type(1){
+    animation: none;
+    stroke: #222;
+    stroke-dasharray: none;
+}
+.svgBx svg:nth-of-type(2){
+    filter: blur(25px);
+}
