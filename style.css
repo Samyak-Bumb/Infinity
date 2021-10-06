@@ -46,5 +46,5 @@ body{
     stroke-dasharray: none;
 }
 .svgBx svg:nth-of-type(2){
-    filter: blur(25px);
+    filter: blur(40px);
 }
